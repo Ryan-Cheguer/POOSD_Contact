@@ -27,8 +27,8 @@ $stmt->execute();
 $result = $stmt->get_result();
 $user = $result->fetch_assoc();
 
-// Check if user exists and password is correct
-if (!$user || !password_verify($password, $user['Pass'])) {
+// Check if user exists and password is correct (NO HASHING)
+if (!$user || $password !== $user['Pass']) {
     echo json_encode(["error" => "Invalid username or password"]);
     http_response_code(401);
     exit;
@@ -40,7 +40,8 @@ $payload = [
     "username" => $user['Username'],
     "exp" => time() + 3600  // Token expires in 1 hour
 ];
-$jwt = JWT::encode($payload, $_ENV['JWT_SECRET'], 'HS256');
+$jwt_secret = "MF7JCcuB+5UtsZy887byx3BQcuSAAEQvwmR5fsWaAgU=";  
+$jwt = JWT::encode($payload, $jwt_secret, 'HS256');
 
 echo json_encode(["token" => $jwt]);
 http_response_code(200);
