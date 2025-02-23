@@ -25,7 +25,7 @@
         $pageNum = 1;
         if(isset($inData['page']) && is_numeric($inData['page'])){
             if($inData['page'] < 1){
-                sendError('Error: Invalid page number');
+                sendError('Invalid page number');
                 exit();
             }
             $pageNum = $inData['page'];
@@ -38,7 +38,7 @@
         $contactsPerPage = 10;
         if(isset($inData['pageSize']) && is_numeric($inData['pageSize'])){
             if($inData['pageSize'] < 1){
-                sendError('Error: Invalid page size');
+                sendError('Invalid page size');
                 exit();
             }
             $contactsPerPage = $inData['pageSize'];
@@ -48,9 +48,8 @@
     }
 
     function sendError($msg, $code = 400){
-        http_response_code($code);
         echo json_encode(["error" => $msg]);
-        http_response_code(400);
+        http_response_code($code);
         exit();
     }
 ?>

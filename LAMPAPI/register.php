@@ -2,12 +2,13 @@
     require 'db.php';
     $inData = getRequestInfo();
     if(!$inData){
-        sendError('Error: No input provided');
+        sendError('No input provided');
+        exit();
     }
 
     // Check if input is valid
     if($inData["firstName"] == '' || $inData["lastName"] == '' || $inData["username"] == '' || $inData["password"] == ''){
-        sendError('Error: All fields are required');
+        sendError('All fields are required');
         exit();
     }
 
@@ -17,7 +18,7 @@
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->fetch_assoc()){
-        sendError('Error: Username already taken');
+        sendError('Username already taken');
         exit();
     }
 
