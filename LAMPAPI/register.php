@@ -2,12 +2,12 @@
     require 'db.php';
     $inData = getRequestInfo();
     if(!$inData){
-        echo "Error: Invalid JSON data received.";
+        sendError('Error: No input provided');
     }
 
     // Check if input is valid
     if($inData["firstName"] == '' || $inData["lastName"] == '' || $inData["username"] == '' || $inData["password"] == ''){
-        echo "Error: Invalid input.";
+        sendError('Error: All fields are required');
         exit();
     }
 
@@ -17,7 +17,7 @@
     $stmt->execute();
     $result = $stmt->get_result();
     if($result->fetch_assoc()){
-        echo "Error: Username already taken.";
+        sendError('Error: Username already taken');
         exit();
     }
 
@@ -27,9 +27,9 @@
     $stmt->execute();
 
     if($stmt->affected_rows > 0){
-        echo "Registered successfully";
+        sendResultInfoAsJson(["success" => "Registered successfully"]);
     } else {
-        echo "Error registering user.";
+        sendError('Error: Failed to register user');
     }
 
     $stmt->close();
