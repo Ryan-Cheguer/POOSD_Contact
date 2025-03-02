@@ -4,7 +4,7 @@
 
     $inData = getRequestInfo();
     if(!$inData || !isset($inData["ID"])){
-        sendError("ID is required");
+        sendError("A contact ID is required");
         exit();
     }
 
@@ -12,7 +12,7 @@
 
     // Ensure the contact belongs to the logged-in user
     $checkStmt = $conn->prepare("SELECT * FROM contacts WHERE ID = ? AND UserID = ?");
-    $checkStmt->bind_param("ii", $contactID, $user['id']);
+    $checkStmt->bind_param("ii", $inData["ID"], $user['id']);
     $checkStmt->execute();
     $result = $checkStmt->get_result();
 
