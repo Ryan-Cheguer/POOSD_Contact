@@ -29,8 +29,9 @@
     if ($deleteStmt->affected_rows > 0) {
         http_response_code(200);
         sendResultInfoAsJson(["success" => "Contact deleted successfully"]);
+        exit();
     } else {
-        sendError("Failed to delete contact", 500);
+        sendError("Failed to delete contact: " . $conn->error, 500);
     }
 
     $deleteStmt->close();
