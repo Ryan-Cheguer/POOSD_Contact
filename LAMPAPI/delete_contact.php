@@ -1,6 +1,6 @@
 <?php
     require 'db.php';
-    require 'auth.db';
+    require 'auth.php';
 
     $inData = getRequestInfo();
     if(!$inData || !isset($inData["ID"])){
