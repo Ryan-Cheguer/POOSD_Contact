@@ -27,6 +27,18 @@
 
     // Prepare search term
     $search = '%' . $inData['search'] . '%';
+
+    // Get total number of contacts that match search criteria
+    $stmt = $conn->prepare("SELECT COUNT(*) as total FROM contacts WHERE UserID = ? AND (FirstName LIKE ? OR LastName LIKE ? OR Phone LIKE ? OR Email LIKE ?)");
+    $stmt->bind_param("issss", $user['id'], $search, $search, $search, $search);
+    if(!$stmt->execute()){
+        sendError('Failed to retrieve contact count', 500);
+        exit();
+    }
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $totalContacts = $row['total'];
+    $stmt->close();
     
     // Get contacts from database
     $stmt = $conn->prepare("SELECT * FROM contacts WHERE UserID = ? AND (FirstName LIKE ? OR LastName LIKE ? OR Phone LIKE ? OR Email LIKE ?) LIMIT $limit OFFSET $offset");
@@ -53,7 +65,8 @@
     sendResultInfoAsJson([
         "contacts" => $contacts,
         "hasMore" => $hasMore,
-        "currentPage" => $pageNum
+        "currentPage" => $pageNum,
+        "totalContacts" => $totalContacts
     ]);
 
     $stmt->close();
