@@ -1,0 +1,499 @@
+ .main-background {
+    background: #F8FAFC;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+}
+
+.navbar {
+    background-color: #F8FAFC;
+    display: flex;
+    align-items: center;
+    height: 44px;
+    width: 100%;
+    justify-content: space-between; /* Space out items */
+}
+
+.search-bar {
+    width: 40%;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background-color: #D5DEE4; /* Set the background color */
+    border: none; /* Remove border color */
+    margin-left: 20.5%; /* Center the search bar */
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IiYjMjQwOyYjMTU5OyYjMTY2OyYjMTM0OyBpY29uICYjMzQ7U2VhcmNoJiMzNDsiPgo8cGF0aCBpZD0iVmVjdG9yIiBkPSJNMTMuODA3MiAxMi4xMDM5TDExLjA4MTMgOS4zNzc5OUMxMC45NTgzIDkuMjU0OTYgMTAuNzkxNSA5LjE4NjYgMTAuNjE2NSA5LjE4NjZIMTAuMTcwOUMxMC45MjU1IDguMjIxNDYgMTEuMzczOSA3LjAwNzUyIDExLjM3MzkgNS42ODY5NEMxMS4zNzM5IDIuNTQ1NDUgOC44Mjg0MyAwIDUuNjg2OTQgMEMyLjU0NTQ1IDAgMCAyLjU0NTQ1IDAgNS42ODY5NEMwIDguODI4NDMgMi41NDU0NSAxMS4zNzM5IDUuNjg2OTQgMTEuMzczOUM3LjAwNzUyIDExLjM3MzkgOC4yMjE0NiAxMC45MjU1IDkuMTg2NiAxMC4xNzA5VjEwLjYxNjVDOS4xODY2IDEwLjc5MTUgOS4yNTQ5NiAxMC45NTgzIDkuMzc3OTkgMTEuMDgxM0wxMi4xMDM5IDEzLjgwNzJDMTIuMzYwOSAxNC4wNjQzIDEyLjc3NjUgMTQuMDY0MyAxMy4wMzA4IDEzLjgwNzJMMTMuODA0NSAxMy4wMzM1QzE0LjA2MTUgMTIuNzc2NSAxNC4wNjE1IDEyLjM2MDkgMTMuODA3MiAxMi4xMDM5Wk01LjY4Njk0IDkuMTg2NkMzLjc1MzkzIDkuMTg2NiAyLjE4NzI5IDcuNjIyNjkgMi4xODcyOSA1LjY4Njk0QzIuMTg3MjkgMy43NTM5MyAzLjc1MTIgMi4xODcyOSA1LjY4Njk0IDIuMTg3MjlDNy42MTk5NiAyLjE4NzI5IDkuMTg2NiAzLjc1MTIgOS4xODY2IDUuNjg2OTRDOS4xODY2IDcuNjE5OTYgNy42MjI2OSA5LjE4NjYgNS42ODY5NCA5LjE4NjZaIiBmaWxsPSIjNDE0QzUyIiBmaWxsLW9wYWNpdHk9IjAuNSIvPgo8L2c+Cjwvc3ZnPgo='); /* SVG as background image */
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    padding-left: 40px; /* Adjust padding to make space for the icon */
+}
+
+.search-bar:focus {
+    border-color: hsla(0, 0%, 0%, 0.40); /* Change this to your desired color */
+    outline: none; /* Remove default outline */
+    color: hsla(0%,0%, 0%, 0.8); /* Darker font color */
+}
+
+
+.user-icon {
+    padding-left: 10%;
+    margin-right: 5px; /* Adjust the margin as needed */
+    align-items: center; /* Center the icon vertically */
+
+}
+
+.logo {
+    max-height: 22.06px;
+    padding-left: 30px;
+}
+
+.language {
+    padding-right: 50px;
+    margin-left: auto; /* Pushes the "EN" to the right end of the navbar */
+    color: rgba(21, 50, 67, 0.62);
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 86px; /* 614.286% */
+}
+
+.main-background-1 {
+    margin-top: 1.5%;
+    background: #F8FAFC;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+}
+
+.left-section {
+    flex: 0 0 300px; /* Fixed width of 300px */
+    min-width: 300px; /* Minimum width of 300px */
+    max-width: 300px; /* Maximum width of 300px */
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-contact{
+    display: flex;
+    width: 270px;
+    height: 50px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: rgba(194, 231, 254, 0.70);
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.section-contact-1{
+    margin-top: 12.5%;
+    display: flex;
+    width: 180px;
+    height: 44px;
+    flex-shrink: 0;
+    background: rgba(194, 231, 254, 0.70);
+    border-radius: 10px;
+    align-items: center;
+    padding-left: 20px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for smooth effect */
+
+}
+
+.section-contact-1:hover{
+    background: rgba(190, 228, 254, 1);
+    transform: scale(1.05);}
+
+.p-contact {
+    padding-left: 20px;
+    color: rgba(21, 50, 67, 0.70);
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86px; /* 614.286% */
+    letter-spacing: 0.56px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: transparent;
+    border:none
+}
+
+button.contact-button {
+    margin-top: 12.5%;
+    display: flex;
+    width: 180px;
+    height: 44px;
+    flex-shrink: 0;
+    background: rgba(194, 231, 254, 0.70);
+    border-radius: 10px;
+    box-sizing: border-box; 
+    transition: background-color 0.3s, transform 0.3s; /* Add transition for smooth effect */
+    border: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Optional: Add hover and active states for better interactivity */
+button.contact-button:hover {
+    background: rgba(190, 228, 254, 1);
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-top: 12.5%; /* Maintain the top margin */
+}
+
+/* Common styles for both buttons */
+button.close-button,
+button.register-button {
+    display: flex;
+    width: 180px;
+    height: 44px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s, transform 0.3s;
+    border: none; /* Remove the black border */
+    outline: none; /* Remove the outline on focus (optional) */
+}
+
+/* Specific styles for the contact button */
+button.contact-button {
+    background: rgba(194, 231, 254, 0.70);
+}
+
+button.close-button:hover {
+    background: rgba(194, 231, 254, 1);
+    transform: scale(1.05);
+}
+
+/* Specific styles for the save button */
+button.register-button {
+    background: rgba(22, 240, 142, 0.7);
+}
+
+button.register-button:hover {
+    background: rgb(22, 240, 142);
+    transform: scale(1.05);
+}
+
+.menu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f9f9f9;
+    padding: 40px; /* Increased padding for a bigger menu */
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 10px; /* Rounded corners */
+    width: 400px; /* Increased width */
+    z-index: 9999; /* Very high value to ensure it's on top */
+
+}
+
+.text-section {
+    display: flex;
+    width: 395px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.input-box {
+    width: 309px;
+    height: 49px;
+    padding-left: 40px; /* Space for the SVG icon */
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Light border */
+    color: rgba(21, 50, 67, 1); /* Text color */
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 86px; /* Adjust line height for vertical alignment */
+    letter-spacing: 2px;
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTMiIGhlaWdodD0iMTIiIHZpZXdCb3g9IjAgMCAxMyAxMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgaWQ9IiYjMjQwOyYjMTU5OyYjMTY2OyYjMTM0OyBpY29uICYjMzQ7VXNlciYjMzQ7Ij4KPHBhdGggaWQ9IlZlY3RvciIgZD0iTTYuMjUgNS44MzMzM0M4LjIyMjY2IDUuODMzMzMgOS44MjE0MyA0LjUyNzY3IDkuODIxNDMgMi45MTY2N0M5LjgyMTQzIDEuMzA1NjYgOC4yMjI2NiAwIDYuMjUgMEM0LjI3NzM0IDAgMi42Nzg1NyAxLjMwNTY2IDIuNjc4NTcgMi45MTY2N0MyLjY3ODU3IDQuNTI3NjcgNC4yNzczNCA1LjgzMzMzIDYuMjUgNS44MzMzM1pNOC43NSA2LjU2MjVIOC4yODQwNEM3LjY2NDYyIDYuNzk0OTIgNi45NzU0UgNi45MjcwOEM1LjUyNDU1IDYuOTI3MDggNC44MzgxNyA2Ljc5NDkyIDQuMjE1OTYgNi41NjI1SDMuNzVDMS42Nzk2OSA2LjU2MjUgMCA3LjkzNDI1IDAgOS42MjVWMTAuNTcyOUMwIDExLjE3NjggMC41OTk4ODggMTEuNjY2NyAxLjMzOTI5IDExLjY2NjdIMTEuMTYwN0MxMS45MDAxIDExLjY2NjcgMTIuNSAxMS4xNzY4IDEyLjUgMTAuNTcyOVY5LjYyNUMxMi41IDcuOTM0MjUgMTAuODIwMyA2LjU2MjUgOC43NSA2LjU2MjVaIiBmaWxsPSIjMTUzMjQzIiBmaWxsLW9wYWNpdHk9IjAuNDUiLz4KPC9nPgo8L3N2Zz4K') no-repeat 10px center; /* SVG as background image */
+    background-size: 12.5px 12px; /* Adjust size of the SVG */
+    border-radius: 5px; /* Rounded corners for input box */
+}
+
+.right-section {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.right-section-heading {
+    display: flex;
+    width: 271px;
+    height: 81px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: rgba(46, 58, 70, 0.80);
+font-family: "Helvetica Neue";
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: 86px; /* 307.143% */
+letter-spacing: 1.12px;
+margin-left: 5%;
+}
+
+.contacts-heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    margin-bottom: 10px;
+    width: 90%; /* Adjust the width to make it narrower */
+    margin: 0 auto; /* Center the heading */
+}
+
+.heading-item {
+    flex: 1;
+    color: rgba(46, 58, 70);
+
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-align: center;
+    padding-bottom: 1%;
+
+}
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Full height of the parent */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.contacts-box {
+    min-width: 528px;
+    min-height: 632px;
+    justify-content: center;
+    text-align: center;
+    display: grid;
+    margin: 0; /* Ensure no margin */
+    padding: 0; /* Ensure no padding */
+    border-radius: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.20); /* Add border property */
+    background-color: #FAFBFC;
+}
+
+.text-box-1 {
+    margin-top: 21px;
+    width: 395px;
+    color: #000;
+    text-align: center;
+    font-family: "Helvetica Neue";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 70px;
+    height: 70px;
+    margin-bottom: 0; /* Ensure no margin */
+}
+
+.contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.contacts-table {
+    width: 95%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin-left: 2.5%;
+}
+
+
+
+.contacts-row {
+    width: 95%;
+    table-layout: fixed;
+    border-collapse: separate;
+    margin-left: 2.5%;
+    transition: background-color 0.3s ease; /* Add transition for smooth effect */
+    border-radius:25px;
+}
+
+.contacts-row:hover {
+    background-color: #ecf2fb;
+}
+
+.contacts-item{
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: light;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    padding: 1%;
+    color: #6e6d6d;
+    letter-spacing: 1px;
+}
+
+
+.contacts-button-container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: #6e6d6d;
+
+}
+
+.contacts-button {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Smooth fill transition for SVG paths */
+.contacts-button svg path {
+    transition: fill 0.3s ease-in-out; /* Smooth color change */
+}
+
+/* Specific styles for edit button */
+.edit-button:hover svg path {
+    fill: #1b3a4b;  /* Green on hover */
+}
+
+.edit-button:hover {
+    transform: scale(1.1); /* Slight grow effect */
+}
+
+/* Specific styles for delete button */
+.delete-button:hover svg path {
+    fill: #1b3a4b;  /* Red on hover */
+}
+
+.delete-button:hover {
+    transform: scale(1.1); /* Slight grow effect */
+}
+
+
+
+
+
+
+.logout-button {
+    margin-top: 8%;
+    display: flex;
+    height: 34px;
+    padding: 0px 40px 0px 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+border: 1px solid #F7F9FB;
+background: #F7F9FB;
+color: #2E3A46;
+text-align: center;
+font-family: "Helvetica Neue";
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: 44px; /* 366.667% */
+transition: ease-in-out 0.3s; /* Add transition for smooth effect */
+
+}
+
+
+.logout-button:hover {
+    border-radius: 5px;
+    scale: 1.05;
+border: 1px solid #FFAB91;
+
+background: #FFAB91;
+}
+.p-contact-1 {
+    color: rgba(21, 50, 67, 0.70);
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 86px; /* 614.286% */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    background-color: transparent;
+    border:none;
+    letter-spacing: 0.30px;
+
+}
+
+
+
+.page-container {
+    justify-content: center;
+    width: 100%;
+    height: 24px;   
+    display: flex;
+    flex-direction: row; /* Ensure items are displayed in a row */
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between items */
+    bottom: 35%;
+    left: 0%;
+    position: absolute;
+}
+
+.page-number {
+    color: rgba(46, 58, 70, 0.80);
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    gap: 10px; /* Space between items */
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+
+
+.page-button{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: ease-in-out 0.3s; 
+    padding: 5px;
+}
+
+.page-button:hover{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    scale: 1.1;
+    background: hwb(210 29% 52% / 0.15);
+
+}
